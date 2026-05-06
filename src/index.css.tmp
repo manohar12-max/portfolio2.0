@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@700&display=swap');
+
+:root {
+  /* Dark Theme (Default) */
+  --bg-color: #05060a;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --accent-color: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.5);
+  --accent-hover: rgba(59, 130, 246, 0.1);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --sidebar-width: 80px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-bg: rgba(0, 0, 0, 0.9);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
