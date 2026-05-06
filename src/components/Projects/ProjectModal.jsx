@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, PlayCircle } from 'lucide-react';
 import { GitHub, LinkedIn } from '../Icons';
@@ -6,6 +6,14 @@ import { GitHub, LinkedIn } from '../Icons';
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Reset modal state when it opens
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentSlide(1);
+      setCurrentImageIndex(0);
+    }
+  }, [isOpen]);
 
   if (!project) return null;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, BarChart3, Rocket, Users } from 'lucide-react';
+import { Target, BarChart3, Rocket, Users, Database, MessageSquare, ShieldCheck, Presentation } from 'lucide-react';
 import PlexusBackground from '../Background/Background';
 import SectionHeading from '../SectionHeading';
 
@@ -61,6 +61,45 @@ const About = () => {
               <p className="card-text">{point.text}</p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Key Skills Section */}
+        <div className="skills-container">
+          <motion.h3 
+            className="skills-heading"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+          >
+            Key <span className="text-gradient">Skills</span>
+          </motion.h3>
+          
+          <div className="skills-grid">
+            {[
+              { name: "MySQL", icon: Database, desc: "Relational database management and optimization" },
+              { name: "Communication Skills", icon: MessageSquare, desc: "Articulating complex data findings clearly" },
+              { name: "Stakeholder Management", icon: ShieldCheck, desc: "Aligning data projects with business goals" },
+              { name: "Presentation Skills", icon: Presentation, desc: "Visualizing insights for executive decision-making" }
+            ].map((skill, index) => (
+              <motion.div 
+                key={index}
+                className="skill-pill-card"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: false }}
+              >
+                <div className="skill-icon-box">
+                  <skill.icon size={24} color="var(--accent-color)" />
+                </div>
+                <div className="skill-info">
+                  <h4>{skill.name}</h4>
+                  <p>{skill.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -56,9 +56,10 @@ const Sidebar = () => {
         <button 
           className="theme-toggle" 
           onClick={toggleTheme}
-          title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
           {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+          <span className="sidebar-tooltip">Theme</span>
         </button>
 
         <div className="nav-links">
@@ -68,9 +69,10 @@ const Sidebar = () => {
               href={`#${item.id}`}
               className={`nav-item ${active === item.id ? 'active' : ''}`}
               onClick={() => handleClick(item.id)}
-              title={item.label}
+              aria-label={item.label}
             >
               <item.icon size={24} />
+              <span className="sidebar-tooltip">{item.label}</span>
             </a>
           ))}
         </div>

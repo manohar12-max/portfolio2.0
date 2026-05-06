@@ -5,12 +5,12 @@ import { Excel, PowerBI, SQL } from '../Icons';
 const ProjectStats = () => {
   const stats = [
     { image: '/Microsoft_Office_Excel_(2019–2025).svg.png', count: 1, label: 'Excel Project', color: '#107c41' },
-    { image: '/pwerbi.png', count: 4, label: 'PowerBI Projects', color: '#f2c811' },
-    { image: '/sql.jpg', count: 1, label: 'SQL Project', color: '#336791' },
+    { image: '/powerbi.png', count: 4, label: 'PowerBI Projects', color: '#f2c811' },
+    { image: '/sql.png', count: 1, label: 'SQL Project', color: '#336791' },
   ];
 
   return (
-    <motion.div 
+    <motion.div
       className="project-stats-bar"
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
